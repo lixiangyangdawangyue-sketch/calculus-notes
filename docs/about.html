@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>about – Some statistics questions for practice</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-2ae7dbb6a8a91d2d75a298d77e53d9d4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Some statistics questions for practice</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Question</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<span class="menu-text">Solution</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>Solutions</p>
+<hr>
+<p><strong>1.</strong> The accumulation of policy reserve in the 1st year is <span class="math display">\[[0+G(.6)](1.1)-1000q_{x}=p_{x}\cdot(16.84)\]</span></p>
+<p>If we knew the value of <span class="math inline">\(q_{x}\)</span>, we could find G. Using the recursive relationship for net reserve for the 1st year, we have <span class="math display">\[[0+80](1.1)-1000q_{x}=p_{x}(40)\]</span></p>
+<p>, and solving for <span class="math inline">\(q_{x}\)</span> results in <span class="math inline">\(q_{x}=.05\)</span>. Then <span class="math display">\[.6G(1.1)-1000(.05)=(.95)\cdot(16.84)\rightarrow G=100\]</span></p>
+<p>Answer: A</p>
+<hr>
+<p><strong>2.</strong> We use the recursive reserve relationship <span class="math display">\[({}_{k-1}V+\pi)(1+i)-(b_{k}-{}_{k}V)\cdot q_{x+k-1}={}_{k}V.\]</span></p>
+<p>At time 0, <span class="math inline">\({}_{0}V=0\)</span>, and at time 2 when the policy ends, <span class="math inline">\({}_{2}V=0\)</span> since this is a term insurance. For the first year <span class="math inline">\((k=1)\)</span>, since <span class="math inline">\(b_{1}=1000+{}_{1}V\)</span>, we have <span class="math display">\[\pi(1.08)-1000(.1)={}_{1}V \text{, so that } {}_{1}V=1.08\pi-100\]</span></p>
+<p>Then, for the second year, <span class="math inline">\(b_{2}=2000+{}_{2}V\)</span>, so that <span class="math display">\[(1.08\pi-100+\pi)(1.08)-2000(.1)=0.\]</span></p>
+<p>Solving for <span class="math inline">\(\pi\)</span> results in <span class="math inline">\(\pi=137.1\)</span>.</p>
+<p>Answer: A</p>
+<hr>
+<p><strong>3.</strong> Let S denote the aggregate present value random variable of the N annuities. <span class="math display">\[S=\sum_{j=1}^{N}W_{j}\]</span> where each <span class="math inline">\(W_{j}=500Y\)</span> and Y is the PVRV for a life annuity-due of 1 per year. Then <span class="math display">\[E[Y]=\ddot{a}_{x}=\frac{1-A_{x}}{d}=\frac{1-.369131}{.06/1.06}=11.1454\]</span> , and <span class="math display">\[Var[Y]=\frac{1}{d^{2}}\cdot[^{2}A_{x}-(A_{x})^{2}]=12.8445.\]</span></p>
+<p>Then, <span class="math inline">\(E[W]=500E[Y]=5572.7\)</span> and <span class="math inline">\(Var[W]=500^{2}\cdot Var[Y]=3,211,125\)</span>. <span class="math display">\[E[S]=N\cdot E[W]=5572.7N\]</span> , and from the independence of the lives, <span class="math display">\[Var[S]=N\cdot Var[W]=3,211,125N.\]</span></p>
+<p>We want the initial fund amount F so that <span class="math inline">\(P[S\le F]=.90\)</span>. Applying the normal approximation, we get <span class="math display">\[P\left[\frac{S-5572.7N}{\sqrt{3,211,125N}}\le\frac{1,429,440-5572.7N}{\sqrt{3,211,125N}}\right]=\Phi\left(\frac{1,429,440-5572.7N}{\sqrt{3,211,125N}}\right)=.9\]</span></p>
+<p>From the normal table, we get <span class="math display">\[\frac{1,429,440-5572.7N}{\sqrt{3,211,125N}}=1.28\]</span></p>
+<p>We can solve a quadratic equation for N, or try each possible answer to find <span class="math inline">\(N=250\)</span>.</p>
+<p>Answer: C</p>
+<hr>
+<p><strong>4.</strong> <span class="math inline">\(L=\)</span> PVRV benefit - PVRV premium. The later that the death occurs, the smaller the PV of benefit and the larger the PV of premium received. The median value of L, say <span class="math inline">\(L_{m}\)</span> would satisfy <span class="math inline">\(P[L\le L_{m}]=.5\)</span>. If we find the point <span class="math inline">\(t_{m}\)</span> for which <span class="math inline">\({}_{t_{m}}p_{70}=.5\)</span>, and then find the issue-date loss <span class="math inline">\(L_{t_{m}}\)</span> based on death at exact time t, then <span class="math inline">\(L\le L_{t_{m}}\)</span> is equivalent to <span class="math inline">\(t\ge t_{m}\)</span>, which has probability .5.</p>
+<p>From the table, <span class="math inline">\(l_{70}=91,082.4\)</span>. In order to have <span class="math inline">\({}_{t}p_{70}=.5\)</span>, we must have <span class="math inline">\(\frac{l_{70+t}}{91,082.4}=.5\)</span> so that <span class="math inline">\(l_{70+t_{m}}=45,541.2\)</span>. From the table we see that <span class="math inline">\(l_{89}=45,995.6\)</span> and <span class="math inline">\(l_{90}=41,841.1\)</span>. Using linear interpolation, we see that under UDD we have <span class="math inline">\(t_{m} \approx 89.109\)</span>.</p>
+<p>The issue date loss if death occurs at age 89.109 (19.109 years after issue) is $100,000v^{19.109}-1600_{|.05}=26,391$. This is the median of L.</p>
+<p>Answer: D</p>
+<hr>
+<p><strong>9.</strong> <span class="math inline">\(_{2|}A_{[60]:\overline{2}|}=v^{3}\cdot{}_{2|}q_{[60]}+v^{4}\cdot({}_{3|}q_{[60]}+{}_{4}p_{[60]})\)</span>. <span class="math display">\[{}_{2|}q_{[60]}={}_{2}p_{[60]}\cdot q_{[60]+2}=p_{[60]}\cdot p_{[60]+1}\cdot q_{[60]+2}=(1-.09)(1-.11)(.13)=.1053\]</span> <span class="math display">\[{}_{3|}q_{[60]}={}_{3}p_{[60]}\cdot q_{63}=p_{[60]}\cdot p_{[60]+1}\cdot p_{[60]+2}\cdot q_{63}=(1-.09)(1-.11)(1-.13)(.15)=.1057\]</span> <span class="math display">\[{}_{4}p_{[60]}=p_{[60]}\cdot p_{[60]+1}\cdot p_{[60]+2}\cdot p_{63}=(1-.09)(1-.11)(1-.13)(.85)=.5989\]</span> <span class="math display">\[_{2|}A_{[60]:\overline{2}|}=.7224\]</span></p>
+<p>Answer: D</p>
+<hr>
+<p><strong>10.</strong> Under the UDD assumption, <span class="math inline">\(\ddot{a}_{x}^{(m)}=\alpha(m)\cdot\ddot{a}_{x}-\beta(m)\)</span>. <span class="math display">\[i^{(2)}/d^{(2)}=1+\frac{i^{(2)}}{2}=1.035374\rightarrow i^{(2)}=.070748 \text{ and } d^{(2)}=.068331\]</span></p>
+<p>Then <span class="math inline">\(i=(1+\frac{i^{(2)}}{2})^{2}-1=.0720\)</span> and <span class="math inline">\(d=\frac{i}{1+i}=.067164\)</span>. Then, <span class="math inline">\(\alpha(2)=\frac{id}{i^{(2)}d^{(2)}}=1.000316\)</span> and <span class="math inline">\(\beta(2)=\frac{\alpha(2)-1}{d^{(2)}}=.258984\)</span>. Then, <span class="math inline">\(\ddot{a}_{x}=\frac{\ddot{a}_{x}^{(2)}+\beta(2)}{\alpha(2)}=10.2557\)</span> and <span class="math inline">\(A_{x}=1-d\ddot{a}_{x}=.3112\)</span>. Finally, under UDD, <span class="math inline">\(\overline{A}_{x}=\frac{i}{\delta}\cdot A_{x}=\frac{.0720}{ln(1.072)}\cdot.3112=.322\)</span>.</p>
+<p>Answer: D</p>
+<hr>
+<p><strong>11.</strong> From the LTAM Table we have $1000A_{30}=76.98<span class="math inline">\(.
+The APV of the premiums is \$2x\cdot\ddot{a}_{30}-x\cdot\ddot{a}_{30:\overline{5}|}\)</span>.</p>
+<p>From the LTAM Table we have <span class="math inline">\(\ddot{a}_{30}=19.3834\)</span>, and <span class="math display">\[\ddot{a}_{30:\overline{5}|}=\ddot{a}_{30}-v^{5}{}_{5}p_{30}\ddot{a}_{35}=\ddot{a}_{30}-{}_{5}E_{30}\ddot{a}_{35}\]</span> <span class="math display">\[=19.383-(.78219)(18.7928)=4.6839.\]</span></p>
+<p>The APV of premiums is $2x(19.3834)-x(4.6839)=34.0829x<span class="math inline">\(.
+Then \$34.0829x=76.98\)</span>, so that <span class="math inline">\(x=2.26\)</span>.</p>
+<p>Answer: E</p>
+<hr>
+<p><strong>12.</strong> The original net premium is based on the original insurance value. <span class="math inline">\(\$1000P_{60}=\frac{1000A_{60}}{ \ddot{a}_{60} } = \frac{1000A_{60}}{(1-A_{60})/d} = \frac{1000(.36933)}{(1-.36933)/(.06/1.06)}=33.145.\)</span>$</p>
+<p>The expected loss at issue is <span class="math display">\[APV\ benefit - APV\ premium=1000A_{60}'-33.145 \ddot{a}_{60}'=1000A_{60}'-33.145\left(\frac{1-A_{60}'}{d}\right)=114.3.\]</span></p>
+<p>It follows that <span class="math inline">\(A_{60}'=.44140\)</span>. Therefore <span class="math display">\[A_{60}=.36933=vq_{60}+v(1-q_{60})A_{61}\]</span> and <span class="math display">\[A_{60}'=.44140=v(10q_{60})+v(1-10q_{60})A_{61}\]</span></p>
+<p>Since there is no change in mortality from age 61, we get <span class="math display">\[A_{61}=\frac{.36933-vq_{60}}{v(1-q_{60})}=\frac{.4414-10vq_{60}}{v(1-10q_{60})}\]</span></p>
+<p>This results in a quadratic equation for <span class="math inline">\(q_{60}\)</span>, which we can solve. Alternatively, we can “guess and check” to find that <span class="math inline">\(q_{60}=.01376\)</span>.</p>
+<p>Answer: D</p>
+<hr>
+<p><strong>13.</strong> <span class="math inline">\(R=(1-.05)\times(1-.08)\times(1-.12)\times(1-.2)=.95\times.92\times.88\times.8=.61529\)</span>. <span class="math inline">\(q(x,C)=.05\)</span>, <span class="math inline">\(q(x+1,C+1)=q(x+1,C)\times(1-\phi_{x+1})=.08\times.9=.072\)</span>. <span class="math inline">\(q(x+2,C+2)=q(x+2,C)\times(1-\phi_{x+1})^{2}=.12\times.9^{2}=.0972\)</span>. <span class="math inline">\(q(x+3,C+3)=q(x+3,C)\times(1-\phi_{x+1})^{3}=.2\times.9^{3}=.1458\)</span>. <span class="math display">\[S=(1-.05)(1-.072)(1-.0972)(1-.1458)=.67987\]</span> <span class="math display">\[\frac{R}{S}=.905\]</span></p>
+<p>Answer: E</p>
+<hr>
+<p><strong>15.</strong> Let <span class="math inline">\(p=1-q\)</span>. <span class="math display">\[\ddot{a}_{x:\overline{10}|}=1+vp_{x}+v^{2}{}_{2}p_{x}+\cdot\cdot\cdot+v^{9}{}_{9}p_{x}=1+vp+v^{2}p^{2}+\cdot\cdot\cdot+v^{9}p^{9}=\frac{1-v^{10}p^{10}}{1-vp}\]</span> <span class="math display">\[A^{1}_{x:\overline{10}|}=vq_{x}+v^{2}{}_{1|}q_{x}+\cdot\cdot\cdot+v^{10}{}_{9|}q_{x}=vq+v^{2}pq+\cdot\cdot\cdot+v^{10}p^{9}q\]</span> <span class="math display">\[=vq[1+vp+v^{2}p^{2}+\cdot\cdot\cdot+v^{9}p^{9}]=vq\left[\frac{1-v^{10}p^{10}}{1-vp}\right]\]</span> <span class="math display">\[P^{1}_{x:\overline{10}|}=\frac{A^{1}_{x:\overline{10}|}}{\ddot{a}_{x:\overline{10}|}}=vq\]</span></p>
+<p>Using the recursive formula for reserves, <span class="math inline">\((_{k-1}V + P)(1+i) - q_{x+k-1}b_k = p_{x+k-1} {}_{k}V\)</span>. For <span class="math inline">\(k=1\)</span>: <span class="math inline">\((0+vq)(1+i)-q(1)=p\cdot {}_{1}V \implies q-q = p\cdot {}_{1}V \implies 0=p\cdot {}_{1}V \implies {}_{1}V=0\)</span>. Same equation continues for <span class="math inline">\(k=2,3,...,9\)</span> so <span class="math inline">\({}_{k}V=0\)</span> for all k.</p>
+<p>Answer: A</p>
+<hr>
+<p><strong>18.</strong> <span class="math inline">\(G\cdot\ddot{a}_{35:\overline{40}|}=.25G+200+.1G a_{35:\overline{39}|}+50 a_{35:\overline{39}|}+200,000 A_{35:\overline{40}|}+200A^{1}_{35:\overline{40}|}\)</span>. <span class="math display">\[G=\frac{150+50\ddot{a}_{35:\overline{40}|}+200,000A_{35:\overline{40}|}+200A^{1}_{35:\overline{40}|}}{.9\ddot{a}_{35:\overline{40}|}-.15}\]</span></p>
+<p>But <span class="math inline">\(\ddot{a}_{35:\overline{40}|}=\frac{1-A_{35:\overline{40}|}}{d}=15.4663\)</span>, and <span class="math inline">\(A_{35:\overline{40}|}^{1}=A_{35:\overline{40}|}-A_{35:\overline{40}| \quad \rceil} = .047971 \rightarrow G=1876.78\)</span>. Net premium = $200,000 A_{35:|} / _{35:|} = 1610.58$. Expense loading <span class="math inline">\(= G - P^{net} = 266.20\)</span>. Using the recursive relationship for expense reserves, we have <span class="math display">\[(_{0}V^{e} + G - e_0)(1+i) - e_1 q_{35} = p_{35} {}_{1}V^{e}\]</span> <span class="math display">\[(0 + 1876.78 - (0.25 \times 1876.78 + 200))(1.06) - 200(0.001223) = (1-0.001223){}_{1}V^{e} \implies {}_{1}V^{e}=-427.94\]</span> and <span class="math display">\[(_{1}V^{e} + G - e_1)(1+i) - e_2 q_{36} = p_{36} {}_{2}V^{e}\]</span> <span class="math display">\[(-427.94 + 1876.78 - (0.10 \times 1876.78 + 50))(1.06) - 200(0.0012735) = (1-0.0012735){}_{2}V^{e} \implies {}_{2}V^{e}=-424.1\]</span></p>
+<p>Answer: B</p>
+<hr>
+<p><strong>19.</strong> We use the following general relationship: <span class="math display">\[{}_{m}V=\pi\cdot\ddot{s}_{\overline{m}|}-\sum_{k=0}^{m-1}q_{x+k}\cdot(1+i)^{m-k-1}\cdot(b_{k+1}-{}_{k+1}V)\]</span></p>
+<p>For an endowment policy, the reserve at the time of endowment is equal to the endowment amount. In this case, we have <span class="math inline">\({}_{30}V=500,000\)</span>. The premium is payable for only 20 years, so in the right hand side of the expression, <span class="math inline">\(\pi\cdot \ddot{s}_{\overline{m}|}\)</span> is replaced by <span class="math inline">\(\pi\cdot \ddot{s}_{\overline{20}|}\cdot(1+i)^{10}\)</span> (this term is the accumulated premium to the time of endowment using interest only). The expression becomes <span class="math inline">\(\$500,000=\pi\cdot s_{\overline{20}|}\cdot(1+i)^{10}-\sum_{k=0}^{29}q_{35+k}\cdot(1+i)^{30-k-1}\cdot(b_{k+1}-{}_{k+1}V).\)</span>$</p>
+<p>Since <span class="math inline">\(b_{k+1}={}_{k+1}V\)</span> for <span class="math inline">\(k=0,1,...,28\)</span>, and <span class="math inline">\(b_{30}=0\)</span> (no death benefit in year 30) and <span class="math inline">\({}_{30}V=500,000\)</span>, the summation simplifies. All terms in the sum are zero except for the last one, at k=29. <span class="math inline">\(\$500,000=\pi\cdot \ddot{s}_{\overline{20}|}\cdot(1+i)^{10}-q_{64}\cdot(1+i)^{0}\cdot(0-500,000)\)</span>$</p>
+<p>With <span class="math inline">\(i=.04\)</span> and <span class="math inline">\(q_{64}=.02\)</span>, solving for <span class="math inline">\(\pi\)</span> results in <span class="math inline">\(\pi=10,689\)</span>.</p>
+<p>Answer: E</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

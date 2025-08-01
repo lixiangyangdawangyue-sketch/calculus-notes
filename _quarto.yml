@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Some statistics questions for practice"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Question"
+      - href: about.qmd
+        text: "Solution"
+      
+
+format:
+  html:
+    theme: yeti  
+    toc: true
+    math-method: mathjax
+
+
+

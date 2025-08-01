@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html#介绍",
+    "href": "index.html#介绍",
+    "title": "calculus-notes",
+    "section": "介绍",
+    "text": "介绍\n微积分基本定理（Fundamental Theorem of Calculus）是微积分学中最重要的定理，它将微分和积分这两个看似独立的概念联系在了一起。"
+  },
+  {
+    "objectID": "index.html#定理内容",
+    "href": "index.html#定理内容",
+    "title": "calculus-notes",
+    "section": "定理内容",
+    "text": "定理内容\n该定理包含两个部分。\n\n第一部分\n如果函数 \\(f\\) 在闭区间 \\([a, b]\\) 上连续，那么函数 \\(F\\) 定义为：\n\\[\nF(x) = \\int_{a}^{x} f(t) \\,dt\n\\]\n在开区间 \\((a, b)\\) 上是可导的，并且其导数是 \\(f(x)\\)，即：\n\\[\nF'(x) = f(x)\n\\]\n\n\n第二部分\n如果函数 \\(f\\) 在闭区间 \\([a, b]\\) 上连续，并且 \\(G\\) 是 \\(f\\) 的任意一个原函数（即 \\(G'(x) = f(x)\\)），那么：\n\\[\n\\int_{a}^{b} f(x) \\,dx = G(b) - G(a)\n\\]"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "关于本站",
+    "section": "",
+    "text": "我是一名正在学习如何高效构建技术文档的学生。"
+  },
+  {
+    "objectID": "about.html#关于我",
+    "href": "about.html#关于我",
+    "title": "关于本站",
+    "section": "",
+    "text": "我是一名正在学习如何高效构建技术文档的学生。"
+  },
+  {
+    "objectID": "about.html#关于本站",
+    "href": "about.html#关于本站",
+    "title": "关于本站",
+    "section": "关于本站",
+    "text": "关于本站\n本网站旨在演示如何使用 Quarto 和 GitHub Pages 高效地托管包含 LaTeX 公式的 HTML 页面。"
+  }
+]
