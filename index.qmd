@@ -14,11 +14,11 @@ Question
 
 Calculate the level annual contract premium.
 
-(A) 100
-(B) 102
-(C) 104
-(D) 106
-(E) 108
+-(A) 100
+-(B) 102
+-(C) 104
+-(D) 106
+-(E) 108
 
 ---
 
