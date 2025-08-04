@@ -8,7 +8,7 @@ Question
 - (iii) Expenses in year 1, payable at the start of the year, are 40% of contract premiums.
 - (iv) The starting policy reserve is 0 and the policy reserve at the end of the first year is 16.84.
 - (v) $i=0.10$
-- (vi) $1000V_{x}=40$$
+- (vi) $1000V_{x}=40$
 
 
 
@@ -138,7 +138,7 @@ Calculate $x$.
 **12.** For a fully discrete whole life insurance of 1000 on (60), the annual net premium was calculated using the following:
 
 - (i) $i=0.06$
-- (ii) \$1000A_{60}=369.33$
+- (ii) \ $1000A_{60}=369.33$
 
 A particular insured is expected to experience a first-year mortality rate ten times the rate used to calculate the annual net premium. The expected mortality rates for all other years are the ones originally used. The expected loss at issue for this insured, based on the original net premium is 114.3. Calculate $q_{60}$.
 
